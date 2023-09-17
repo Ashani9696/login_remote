@@ -21,26 +21,37 @@ struct login_View: View {
                     return username == "your_username" && password == "your_password"
                 }
     var body: some View {
+        
+        
+            
         NavigationView
                    {
-                                               
+            ZStack{
+                
+                Image("UI")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
+            //Image("UI")
+           
                        VStack
                        {
-                           Image("test image")
-                                   //           .resizable()
-                                              //  .aspectRatio(contentMode: .fit)
-                                                .frame(width: 140, height: 140)
-                                       //         .padding()
-                                   
-                           
-                                          Text("Sign In")
+                        Image("Test")
+                                //       .resizable()
+                                           //  .aspectRatio(contentMode: .fit)
+                                             .frame(width: 140, height: 140)
+                                    //         .padding()
+                                
+                        
+                                 Text("Sign In")
                                               .font(.largeTitle)
                                               .bold()
                                               .italic()
                                               .padding(.vertical)
                                             //.background(Color.blue)
                                          //     .frame(maxWidth:.infinity,alignment: .leading)
-                                             
+                                          
                                   
                            TextField("Username", text: $username)
                                             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -99,13 +110,19 @@ struct login_View: View {
                                         Spacer()
                     
                        }
+                       
+       
                        .padding()
                        
-                    
+            }
+            .navigationBarTitle("",displayMode: .inline)
+                .navigationBarHidden(true)
                        .background(Color.green.opacity(0.7))
+            
+                    
                    }
         
-        
+        //Image("UI")
         
     }
 
