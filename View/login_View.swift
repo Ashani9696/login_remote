@@ -38,6 +38,7 @@ struct login_View: View {
                                               .bold()
                                               .italic()
                                               .padding(.vertical)
+                                            //.background(Color.blue)
                                          //     .frame(maxWidth:.infinity,alignment: .leading)
                                              
                                   
@@ -64,7 +65,7 @@ struct login_View: View {
                                                .foregroundColor(.white)
                                                .padding()
                                                .frame(maxWidth: .infinity)
-                                               .background(Color.blue)
+                                               .background(Color.black)
                                                .cornerRadius(10
                                                )
                                        }
@@ -99,8 +100,9 @@ struct login_View: View {
                     
                        }
                        .padding()
-                    
                        
+                    
+                       .background(Color.green.opacity(0.7))
                    }
         
         
