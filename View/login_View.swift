@@ -61,7 +61,7 @@ struct login_View: View {
                                         SecureField("Password", text: $password)
                                             .textFieldStyle(RoundedBorderTextFieldStyle())
                                            .padding(.horizontal)
-                                           .padding(.bottom, 5)
+                                           .padding(.bottom, 12)
                                        
                            Button(action: {
                                            // Add your login logic here
