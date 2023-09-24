@@ -28,12 +28,17 @@ struct login_View: View {
                    {
             ZStack{
                 
-                Image("UI")
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                // Create a gradient background
+                RadialGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), center: .center, startRadius: 0, endRadius: 300)
+                                .edgesIgnoringSafeArea(.all)
+ // Extend the gradient to the edges
             
-            //Image("UI")
+                //Image("UI")
+                //    .resizable()
+                 //   .scaledToFill()
+                   // .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
+            
            
                        VStack
                        {
