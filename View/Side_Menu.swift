@@ -99,13 +99,11 @@ struct Side_Menu: View {
                     //oprn menu
                     self.menuOpened.toggle()
                     
-                }, label: {
-                    Text("Open Menu")
-                        .bold()
-                        .foregroundColor(Color.black)
-                        .frame(width: 200, height: 50, alignment: .center)
-                        .background(Color(.systemBlue))
                 })
+                {
+                    Image(systemName: "line.horizontal.3")
+                        .imageScale(.large)
+                }  
                 
             }
             SideMenu(width: UIScreen.main.bounds.width/1.8, menuOpened: menuOpened, toggleMenu: toggleMenu)
