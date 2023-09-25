@@ -11,6 +11,7 @@ struct  MenuItem: Identifiable{
 
     var id = UUID()
     let text: String
+    let imageName: String
     let handler: () ->Void = {
         print("Tapped itrms")
     }
@@ -18,12 +19,12 @@ struct  MenuItem: Identifiable{
 
 struct  MenuContent: View {
     let items: [MenuItem] = [
- MenuItem(text: "Home"),
-        MenuItem(text: "Hom"),
-        MenuItem(text: "Ho"),
-        MenuItem(text: "settings"),
-        MenuItem(text: "profile"),
-        MenuItem(text: "reports"),
+        MenuItem(text: "Home",imageName:"house"),
+        MenuItem(text: "Hom",imageName:"house"),
+        MenuItem(text: "Ho",imageName:"house"),
+        MenuItem(text: "settings",imageName:"house"),
+        MenuItem(text: "profile",imageName:"house"),
+        MenuItem(text: "reports",imageName:"house"),
         ]
     
     var body: some View{
@@ -33,6 +34,11 @@ struct  MenuContent: View {
             VStack(alignment: .leading, spacing: 0){
                 ForEach(items) { item in
                     HStack{
+                        Image(systemName: item.imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width:32, height: 100, alignment:.center)
+                            .foregroundColor(.white)
                         Text(item.text)
                             .foregroundColor(Color.black)
                             .bold()
