@@ -9,7 +9,29 @@ import SwiftUI
 
 struct savings_Det: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Expenses  Details")
+                .font(.largeTitle)
+                .bold()
+                .italic()
+                .offset(y: -70)
+                // padding(.vertical)
+            
+            ZStack{
+                Text("Date")
+                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                    .offset(x: -114)
+                    .padding()
+                
+                
+                
+                
+                
+                
+                
+            }
+
+        }
     }
 }
 

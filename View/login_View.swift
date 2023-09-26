@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct login_View: View {
     
@@ -68,7 +69,7 @@ struct login_View: View {
                                            .padding(.horizontal)
                                            .padding(.bottom, 12)
                                        
-                           Button(action: {
+                           Button(action: { 
                                            // Add your login logic here
                                            if isValidLogin() {
                                                // Navigate to the next screen or perform the desired action
@@ -123,6 +124,8 @@ struct login_View: View {
             .navigationBarTitle("",displayMode: .inline)
                 .navigationBarHidden(true)
                        .background(Color.green.opacity(0.7))
+            
+            
             
                     
                    }

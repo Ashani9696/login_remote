@@ -9,13 +9,14 @@ import SwiftUI
  
 struct income_UI: View {
     @State private var incomewa = ""
+    @State private var incomers = ""
     @State private var seldate = Date()
     var body: some View {
         
-        Side_Menu()
+        //Side_Menu()
                 //.padding(.top,100)
         VStack{
-            //SideM()
+           
            
             
             Text("Income Details")
@@ -71,7 +72,7 @@ struct income_UI: View {
                 
                 
             
-            TextField("Enter text here",text: $incomewa)
+            TextField("Enter text here",text: $incomers)
                 .frame(width: 160, height: 40, alignment: .trailing)
                 .background(Color.gray.opacity(0.25))
                 //.cornerRadius(10.0)
@@ -83,7 +84,7 @@ struct income_UI: View {
             }
             
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("Total Income")
+                Text("Save")
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
@@ -97,7 +98,11 @@ struct income_UI: View {
             
             //SideM()
             
+            Text("Total income :  ")
+            
         }
+        
+        
         
       
             
