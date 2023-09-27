@@ -14,12 +14,12 @@ struct savings_Det: View {
                 .font(.largeTitle)
                 .bold()
                 .italic()
-                .offset(y: -70)
-                // padding(.vertical)
+                .offset(y: -130)
+            // padding(.vertical)
             
             ZStack{
                 Text("Date")
-                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                    .multilineTextAlignment(.leading)
                     .offset(x: -114)
                     .padding()
                 
@@ -30,7 +30,7 @@ struct savings_Det: View {
                 
                 
             }
-
+            
         }
     }
 }

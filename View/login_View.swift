@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Firebase
+//import Firebase
 
 struct login_View: View {
     
@@ -69,13 +69,15 @@ struct login_View: View {
                                            .padding(.horizontal)
                                            .padding(.bottom, 12)
                                        
-                           Button(action: { 
+                           Button(action: {
+                            //login()
+                            
                                            // Add your login logic here
-                                           if isValidLogin() {
+                                           //if isValidLogin() {
                                                // Navigate to the next screen or perform the desired action
-                                           } else {
-                                               showAlert = true
-                                           }
+                                           //} else {
+                                              // showAlert = true
+                                           //}
                                        }) {
                                            Text("Login")
                                                .font(.headline)
@@ -132,8 +134,11 @@ struct login_View: View {
         
         //Image("UI")
         
+        
+        
     }
-
+    
+  
 
 struct login_View_Previews: PreviewProvider {
     static var previews: some View {

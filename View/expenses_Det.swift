@@ -13,7 +13,14 @@ struct expenses_Det: View {
     @State private var seldate = Date()
     var body: some View {
         VStack{
-           
+            
+            NavigationLink(destination: savings_Det()){
+            Image(systemName: "arrow.right.circle")
+                .imageScale(.large)
+                .foregroundColor(Color(UIColor(named: "p")!))
+                .offset(y: -110)
+                .offset(x: 100)
+            }
            
             Text("Expenses  Details")
                 .font(.largeTitle)
@@ -23,6 +30,7 @@ struct expenses_Det: View {
                 // padding(.vertical)
             
             ZStack{
+                
                 Text("Date")
                     .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                     .offset(x: -114)
@@ -83,18 +91,25 @@ struct expenses_Det: View {
                 Text("Save")
                     .font(.headline)
                     .foregroundColor(.white)
-                    .padding()
+                    .padding(.top)
+                    .frame(width: 150, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .background(Color(UIColor(named: "p")!))
-                    .frame(maxWidth: .infinity)
-                    .offset(y:25)
+                    
+                   
+                    .offset(y:20)
                 
                     
                 
             })
             
+            
+            
+            
             //SideM()
             
             Text("Total Expenses :  ")
+                .offset(y: 25)
+                
             
         }
         

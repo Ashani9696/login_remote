@@ -15,17 +15,26 @@ struct income_UI: View {
         
         //Side_Menu()
                 //.padding(.top,100)
+        NavigationView{
+        
         VStack{
-           
-           
             
+            NavigationLink(destination: expenses_Det()){
+            Image(systemName: "arrow.right.circle")
+                .imageScale(.large)
+                .foregroundColor(Color(UIColor(named: "p")!))
+                .offset(y: -110)
+                .offset(x: 100)
+                
+            }
+            ZStack{
             Text("Income Details")
                 .font(.largeTitle)
                 .bold()
                 .italic()
-                .offset(y: -70)
+                .offset(y: -90)
                 // padding(.vertical)
-            
+            }
             ZStack{
                 Text("Date")
                     .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
@@ -36,11 +45,13 @@ struct income_UI: View {
                 
                 DatePicker(" Date",selection: $seldate, displayedComponents:[.date])
                     .datePickerStyle(CompactDatePickerStyle())
+                    .foregroundColor(Color(UIColor(named: "p")!))
                     .labelsHidden()
                     .padding(.horizontal)
                     .padding(.bottom,6)
                     .offset(y: 00)
                     .offset(x: 38)
+                
                      //Text("Date")
             }
             
@@ -91,15 +102,21 @@ struct income_UI: View {
                     .background(Color(UIColor(named: "p")!))
                     .frame(maxWidth: .infinity)
                     .offset(y:25)
+                    
+                    
                 
                     
                 
             })
             
             //SideM()
+            .padding(.bottom)
             
             Text("Total income :  ")
+                .offset(y:25)
             
+            
+        }
         }
         
         

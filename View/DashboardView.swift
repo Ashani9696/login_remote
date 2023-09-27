@@ -18,7 +18,7 @@ struct DashboardView: View {
                         ("Income", 500),
                         ("Expenses", 300),
                         ("Savings", 200)
-                    ]), title: "Monthly Summary", legend: "In Dollars")
+                    ]), title: "Monthly Summary", legend: "In Rupees")
                     .padding()
                 }
     }
